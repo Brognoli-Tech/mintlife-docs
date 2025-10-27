@@ -1,43 +1,43 @@
-# Mintlify Starter Kit
+# Kit de Início do Mintlify
 
-Use the starter kit to get your docs deployed and ready to customize.
+Use o kit de início para colocar seus documentos em produção e pronto para personalizar.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+Clique no botão verde **Use this template** no topo deste repositório para copiar o kit de início do Mintlify. O kit de início contém exemplos com
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+- Páginas de guias
+- Navegação
+- Personalizações
+- Páginas de referência de API
+- Uso de componentes populares
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+**[Siga o guia completo de início rápido](https://starter.mintlify.com/quickstart)**
 
-## Development
+## Desenvolvimento
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+Instale o [CLI do Mintlify](https://www.npmjs.com/package/mint) para visualizar suas alterações de documentação localmente. Para instalar, use o seguinte comando:
 
 ```
 npm i -g mint
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+Execute o seguinte comando na raiz da sua documentação, onde seu `docs.json` está localizado:
 
 ```
 mint dev
 ```
 
-View your local preview at `http://localhost:3000`.
+Visualize sua prévia local em `http://localhost:3000`.
 
-## Publishing changes
+## Publicando alterações
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+Instale nosso aplicativo GitHub do seu [painel](https://dashboard.mintlify.com/settings/organization/github-app) para propagar alterações do seu repositório para sua implantação. As alterações são implantadas em produção automaticamente após fazer push para o branch padrão.
 
-## Need help?
+## Precisa de ajuda?
 
-### Troubleshooting
+### Solução de problemas
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+- Se seu ambiente de desenvolvimento não estiver funcionando: Execute `mint update` para garantir que você tem a versão mais recente do CLI.
+- Se uma página carregar como 404: Certifique-se de que você está executando em uma pasta com um `docs.json` válido.
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+### Recursos
+- [Documentação do Mintlify](https://mintlify.com/docs)

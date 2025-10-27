@@ -1,0 +1,398 @@
+---
+title: "API Documentation"
+description: "Documentação completa da API do Grupo RV para integrações e desenvolvimento"
+---
+
+# API Documentation
+
+<Info>
+Nossa API REST permite integração completa com os serviços do Grupo RV. Todas as requisições devem ser autenticadas.
+</Info>
+
+## Autenticação
+
+### API Key
+
+Todas as requisições devem incluir sua API key no header de autorização:
+
+<RequestExample>
+```bash cURL
+curl -X GET 'https://api.gruporv.com.br/v1/users' \
+  -H 'Authorization: Bearer YOUR_API_KEY' \
+  -H 'Content-Type: application/json'
+```
+</RequestExample>
+
+### OAuth 2.0
+
+Para aplicações que precisam de acesso em nome do usuário:
+
+<Steps>
+<Step title="Registre sua aplicação">
+  Acesse o portal de desenvolvedores e registre sua aplicação.
+</Step>
+
+<Step title="Obtenha as credenciais">
+  Você receberá:
+  - Client ID
+  - Client Secret
+  - Redirect URI
+</Step>
+
+<Step title="Implemente o fluxo OAuth">
+  Siga o fluxo de autorização padrão OAuth 2.0.
+</Step>
+</Steps>
+
+## Base URL
+
+```
+https://api.gruporv.com.br/v1
+```
+
+## Rate Limiting
+
+<Warning>
+Respeite os limites de taxa para evitar bloqueios temporários.
+</Warning>
+
+- **Plano Básico**: 100 requisições/minuto
+- **Plano Profissional**: 500 requisições/minuto
+- **Plano Enterprise**: 2000 requisições/minuto
+
+## Endpoints Principais
+
+### Usuários
+
+#### Listar Usuários
+
+<RequestExample>
+```bash cURL
+curl -X GET 'https://api.gruporv.com.br/v1/users' \
+  -H 'Authorization: Bearer YOUR_API_KEY'
+```
+</RequestExample>
+
+<ResponseExample>
+```json Success
+{
+  "data": [
+    {
+      "id": "user_123",
+      "name": "João Silva",
+      "email": "joao@empresa.com",
+      "role": "admin",
+      "created_at": "2024-01-15T10:30:00Z",
+      "updated_at": "2024-01-20T14:22:00Z"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "per_page": 20,
+    "total": 1,
+    "total_pages": 1
+  }
+}
+```
+</ResponseExample>
+
+#### Criar Usuário
+
+<RequestExample>
+```bash cURL
+curl -X POST 'https://api.gruporv.com.br/v1/users' \
+  -H 'Authorization: Bearer YOUR_API_KEY' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Maria Santos",
+    "email": "maria@empresa.com",
+    "role": "user"
+  }'
+```
+</RequestExample>
+
+<ResponseExample>
+```json Success
+{
+  "data": {
+    "id": "user_456",
+    "name": "Maria Santos",
+    "email": "maria@empresa.com",
+    "role": "user",
+    "created_at": "2024-01-21T09:15:00Z",
+    "updated_at": "2024-01-21T09:15:00Z"
+  }
+}
+```
+</ResponseExample>
+
+### Projetos
+
+#### Listar Projetos
+
+<ParamField query="status" type="string" default="all">
+  Filtro por status do projeto. Valores: `active`, `completed`, `paused`, `all`
+</ParamField>
+
+<ParamField query="page" type="integer" default="1">
+  Número da página para paginação
+</ParamField>
+
+<ParamField query="per_page" type="integer" default="20">
+  Número de itens por página (máximo 100)
+</ParamField>
+
+<RequestExample>
+```bash cURL
+curl -X GET 'https://api.gruporv.com.br/v1/projects?status=active&page=1&per_page=10' \
+  -H 'Authorization: Bearer YOUR_API_KEY'
+```
+</RequestExample>
+
+<ResponseExample>
+```json Success
+{
+  "data": [
+    {
+      "id": "proj_789",
+      "name": "Sistema de Vendas",
+      "description": "Desenvolvimento de sistema completo de vendas",
+      "status": "active",
+      "start_date": "2024-01-01",
+      "end_date": "2024-06-30",
+      "progress": 65,
+      "team": [
+        {
+          "id": "user_123",
+          "name": "João Silva",
+          "role": "lead"
+        }
+      ]
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "per_page": 10,
+    "total": 1,
+    "total_pages": 1
+  }
+}
+```
+</ResponseExample>
+
+### Relatórios
+
+#### Gerar Relatório
+
+<ParamField body="type" type="string" required>
+  Tipo do relatório. Valores: `financial`, `performance`, `usage`
+</ParamField>
+
+<ParamField body="start_date" type="string" required>
+  Data de início no formato YYYY-MM-DD
+</ParamField>
+
+<ParamField body="end_date" type="string" required>
+  Data de fim no formato YYYY-MM-DD
+</ParamField>
+
+<ParamField body="format" type="string" default="json">
+  Formato de saída. Valores: `json`, `csv`, `pdf`
+</ParamField>
+
+<RequestExample>
+```bash cURL
+curl -X POST 'https://api.gruporv.com.br/v1/reports' \
+  -H 'Authorization: Bearer YOUR_API_KEY' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "type": "performance",
+    "start_date": "2024-01-01",
+    "end_date": "2024-01-31",
+    "format": "json"
+  }'
+```
+</RequestExample>
+
+## Códigos de Status HTTP
+
+<AccordionGroup>
+<Accordion title="Sucesso (2xx)">
+  - **200 OK**: Requisição bem-sucedida
+  - **201 Created**: Recurso criado com sucesso
+  - **204 No Content**: Requisição bem-sucedida sem conteúdo
+</Accordion>
+
+<Accordion title="Erro do Cliente (4xx)">
+  - **400 Bad Request**: Dados inválidos na requisição
+  - **401 Unauthorized**: Token de autenticação inválido
+  - **403 Forbidden**: Sem permissão para acessar o recurso
+  - **404 Not Found**: Recurso não encontrado
+  - **429 Too Many Requests**: Limite de taxa excedido
+</Accordion>
+
+<Accordion title="Erro do Servidor (5xx)">
+  - **500 Internal Server Error**: Erro interno do servidor
+  - **502 Bad Gateway**: Erro de comunicação com serviço externo
+  - **503 Service Unavailable**: Serviço temporariamente indisponível
+</Accordion>
+</AccordionGroup>
+
+## Tratamento de Erros
+
+### Formato de Erro
+
+```json Error
+{
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Os dados fornecidos são inválidos",
+    "details": [
+      {
+        "field": "email",
+        "message": "Email deve ter formato válido"
+      }
+    ],
+    "request_id": "req_123456789"
+  }
+}
+```
+
+### Códigos de Erro Comuns
+
+<AccordionGroup>
+<Accordion title="AUTENTICATION_REQUIRED">
+  Token de autenticação não fornecido ou inválido.
+</Accordion>
+
+<Accordion title="INSUFFICIENT_PERMISSIONS">
+  Usuário não tem permissão para realizar esta ação.
+</Accordion>
+
+<Accordion title="RESOURCE_NOT_FOUND">
+  O recurso solicitado não foi encontrado.
+</Accordion>
+
+<Accordion title="RATE_LIMIT_EXCEEDED">
+  Limite de requisições por minuto excedido.
+</Accordion>
+
+<Accordion title="VALIDATION_ERROR">
+  Dados fornecidos não passaram na validação.
+</Accordion>
+</AccordionGroup>
+
+## SDKs e Bibliotecas
+
+<CardGroup cols={2}>
+<Card title="JavaScript/Node.js" icon="js" href="https://github.com/gruporv/sdk-js">
+  SDK oficial para JavaScript e Node.js
+</Card>
+
+<Card title="Python" icon="python" href="https://github.com/gruporv/sdk-python">
+  SDK oficial para Python
+</Card>
+
+<Card title="PHP" icon="php" href="https://github.com/gruporv/sdk-php">
+  SDK oficial para PHP
+</Card>
+
+<Card title="Java" icon="java" href="https://github.com/gruporv/sdk-java">
+  SDK oficial para Java
+</Card>
+</CardGroup>
+
+## Exemplos de Integração
+
+### JavaScript/Node.js
+
+```javascript
+const GrupoRVAPI = require('@gruporv/sdk-js');
+
+const api = new GrupoRVAPI({
+  apiKey: process.env.GRUPORV_API_KEY,
+  baseURL: 'https://api.gruporv.com.br/v1'
+});
+
+// Listar usuários
+const users = await api.users.list({
+  page: 1,
+  per_page: 20
+});
+
+// Criar projeto
+const project = await api.projects.create({
+  name: 'Novo Projeto',
+  description: 'Descrição do projeto',
+  start_date: '2024-02-01',
+  end_date: '2024-12-31'
+});
+```
+
+### Python
+
+```python
+from gruporv import GrupoRVAPI
+
+api = GrupoRVAPI(api_key='sua-api-key')
+
+# Listar usuários
+users = api.users.list(page=1, per_page=20)
+
+# Criar projeto
+project = api.projects.create(
+    name='Novo Projeto',
+    description='Descrição do projeto',
+    start_date='2024-02-01',
+    end_date='2024-12-31'
+)
+```
+
+## Webhooks
+
+### Configuração
+
+Configure webhooks para receber notificações em tempo real:
+
+<Steps>
+<Step title="Registre o webhook">
+  Use o endpoint POST /webhooks para registrar uma nova URL de webhook.
+</Step>
+
+<Step title="Configure eventos">
+  Selecione quais eventos você deseja receber.
+</Step>
+
+<Step title="Valide a assinatura">
+  Sempre valide a assinatura HMAC para garantir autenticidade.
+</Step>
+</Steps>
+
+### Eventos Disponíveis
+
+- `user.created` - Novo usuário criado
+- `user.updated` - Usuário atualizado
+- `project.created` - Novo projeto criado
+- `project.updated` - Projeto atualizado
+- `project.completed` - Projeto concluído
+- `report.generated` - Relatório gerado
+
+## Suporte para Desenvolvedores
+
+<CardGroup cols={2}>
+<Card title="Portal do Desenvolvedor" icon="code" href="https://developers.gruporv.com.br">
+  Documentação interativa e ferramentas de teste
+</Card>
+
+<Card title="GitHub" icon="github" href="https://github.com/gruporv">
+  Código-fonte dos SDKs e exemplos
+</Card>
+
+<Card title="Comunidade" icon="users" href="https://community.gruporv.com.br">
+  Fórum da comunidade de desenvolvedores
+</Card>
+
+<Card title="Suporte Técnico" icon="wrench" href="/suporte/contato">
+  Suporte especializado para desenvolvedores
+</Card>
+</CardGroup>

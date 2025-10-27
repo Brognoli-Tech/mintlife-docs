@@ -1,59 +1,50 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Lado Bom Seguros",
+  "name": "Lado Bom Seguros - Documentação",
   "colors": {
-    "primary": "#462880",
-    "light": "#462880",
-    "dark": "#462880"
+    "primary": "#502896",
+    "light": "#502896",
+    "dark": "#1E143C"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.ico",
   "navigation": {
     "tabs": [
       {
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting started",
-            "pages": ["index", "quickstart", "development"]
+            "group": "Início",
+            "pages": ["index", "conceitos-gerais", "sobre-nos", "contato"]
           },
           {
-            "group": "Customization",
-            "pages": ["essentials/settings", "essentials/navigation"]
-          },
-          {
-            "group": "Writing content",
+            "group": "Seguro Fiança",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "produtos/seguro-fianca/sobre",
+              "produtos/seguro-fianca/como-funciona",
+              "produtos/seguro-fianca/coberturas",
+              "produtos/seguro-fianca/processo-sinistro",
+              "produtos/seguro-fianca/faq"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Seguro Incêndio",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "produtos/seguro-incendio/sobre",
+              "produtos/seguro-incendio/diferencas",
+              "produtos/seguro-incendio/coberturas",
+              "produtos/seguro-incendio/contratacao",
+              "produtos/seguro-incendio/renovacao",
+              "produtos/seguro-incendio/faq"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": ["api-reference/introduction"]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Capitalização",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "produtos/capitalizacao/sobre",
+              "produtos/capitalizacao/como-funciona",
+              "produtos/capitalizacao/beneficios",
+              "produtos/capitalizacao/faq"
             ]
           }
         ]
@@ -62,14 +53,14 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Portal do Parceiro",
+          "href": "https://app.ladobom.com/",
+          "icon": "globe"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Atendimento",
+          "href": "https://wa.me/5548996160481",
+          "icon": "headphones"
         }
       ]
     }
@@ -84,14 +75,14 @@
     },
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Suporte",
+        "href": "https://wa.me/5548996160481"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Acessar Plataforma",
+      "href": "https://app.ladobom.com/"
     }
   },
   "contextual": {
@@ -108,9 +99,8 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "linkedin": "https://www.linkedin.com/company/lado-bom-seguros/",
+      "instagram": "https://instagram.com/ladobom.seguros"
     }
   },
   "css": "/custom.css"

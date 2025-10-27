@@ -37,3 +37,571 @@ div[class*="logo"] {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+/* Cores personalizadas da marca - Tons de Roxo Lado Bom Seguros */
+:root {
+  --primary-color: #502896; /* ROXO PANTONE ® VIOLET C */
+  --primary-light: #502896; /* ROXO PANTONE ® VIOLET C */
+  --primary-dark: #1e143c; /* ROXO ESCURO PANTONE ® 7527C */
+  --primary-50: #f5f3ff;
+  --primary-100: #ede9ff;
+  --primary-200: #ddd6fe;
+  --primary-300: #c4b5fd;
+  --primary-400: #a78bfa;
+  --primary-500: #8b5cf6;
+  --primary-600: #502896; /* ROXO PANTONE ® VIOLET C */
+  --primary-700: #1e143c; /* ROXO ESCURO PANTONE ® 7527C */
+  --primary-800: #1a1233;
+  --primary-900: #16102a;
+}
+
+/* Aplicar cores da marca em elementos específicos */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
+/* Botões com cores da marca */
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+}
+
+/* Links com cores da marca */
+a {
+  color: var(--primary-color) !important;
+}
+
+a:hover {
+  color: var(--primary-dark) !important;
+}
+
+/* Cards com bordas da marca */
+.card {
+  border-left: 4px solid var(--primary-color) !important;
+}
+
+/* Títulos com cores da marca */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-dark) !important;
+}
+
+/* Alterar cores verdes para tons de cinza */
+/* Componentes Check (listas com checkmarks) */
+[data-component="Check"] {
+  background-color: #f8f9fa !important;
+  border: 1px solid #e9ecef !important;
+  color: #6c757d !important;
+}
+
+/* Checkmarks verdes para cinza */
+[data-component="Check"] svg,
+[data-component="Check"] .check-icon,
+.check-icon,
+[class*="check"] svg {
+  color: #6c757d !important;
+  fill: #6c757d !important;
+}
+
+/* Backgrounds verdes para cinza */
+[data-component="Check"] {
+  background-color: #f8f9fa !important;
+}
+
+/* Texto verde para cinza */
+[data-component="Check"] p,
+[data-component="Check"] li,
+[data-component="Check"] span {
+  color: #6c757d !important;
+}
+
+/* Info boxes verdes para cinza */
+[data-component="Info"] {
+  background-color: #f8f9fa !important;
+  border-left: 4px solid #6c757d !important;
+  color: #6c757d !important;
+}
+
+/* Warning boxes verdes para cinza */
+[data-component="Warning"] {
+  background-color: #f8f9fa !important;
+  border-left: 4px solid #6c757d !important;
+  color: #6c757d !important;
+}
+
+/* Note boxes verdes para cinza */
+[data-component="Note"] {
+  background-color: #f8f9fa !important;
+  border-left: 4px solid #6c757d !important;
+  color: #6c757d !important;
+}
+
+/* Success states para cinza */
+.success,
+.success-bg,
+[class*="success"] {
+  background-color: #f8f9fa !important;
+  color: #6c757d !important;
+  border-color: #e9ecef !important;
+}
+
+/* Override any green colors in components */
+.green,
+[class*="green"],
+[data-color="green"] {
+  color: #6c757d !important;
+  background-color: #f8f9fa !important;
+  border-color: #e9ecef !important;
+}
+
+/* Componentes específicos do Mintlify */
+/* Check component */
+.check,
+.check-list,
+[class*="check-"] {
+  background-color: #f8f9fa !important;
+  border: 1px solid #e9ecef !important;
+  color: #6c757d !important;
+}
+
+/* Checkmarks em listas */
+.check svg,
+.check-list svg,
+[class*="check-"] svg,
+.check-icon {
+  color: #6c757d !important;
+  fill: #6c757d !important;
+}
+
+/* Lista de checkmarks */
+ul.check,
+ol.check,
+.check ul,
+.check ol {
+  background-color: #f8f9fa !important;
+  border: 1px solid #e9ecef !important;
+  color: #6c757d !important;
+}
+
+/* Override para componentes de sucesso */
+.success,
+.success-bg,
+[data-success],
+[class*="success-"] {
+  background-color: #f8f9fa !important;
+  color: #6c757d !important;
+  border-color: #e9ecef !important;
+}
+
+/* Override para cores de status positivo */
+.positive,
+[data-positive],
+[class*="positive-"] {
+  background-color: #f8f9fa !important;
+  color: #6c757d !important;
+  border-color: #e9ecef !important;
+}
+
+/* Override específico para componentes MDX */
+/* Check component do Mintlify */
+.check-component,
+[data-component="Check"],
+.check-box {
+  background-color: #f8f9fa !important;
+  border: 1px solid #e9ecef !important;
+  color: #6c757d !important;
+}
+
+/* Checkmarks em componentes MDX */
+.check-component svg,
+[data-component="Check"] svg,
+.check-box svg {
+  color: #6c757d !important;
+  fill: #6c757d !important;
+}
+
+/* Override para qualquer elemento com cor verde */
+[style*="green"],
+[style*="rgb(34, 197, 94)"],
+[style*="rgb(22, 163, 74)"],
+[style*="#22c55e"],
+[style*="#16a34a"] {
+  color: #6c757d !important;
+  background-color: #f8f9fa !important;
+  border-color: #e9ecef !important;
+}
+
+/* Override para elementos com cor de sucesso */
+[class*="text-green"],
+[class*="bg-green"],
+[class*="border-green"] {
+  color: #6c757d !important;
+  background-color: #f8f9fa !important;
+  border-color: #e9ecef !important;
+}
+
+/* Override para o menu lateral direito (Table of Contents) */
+.toc a {
+  color: #6c757d !important;
+}
+
+.toc a:hover {
+  color: #495057 !important;
+}
+
+/* Override específico para as classes Tailwind do menu */
+.py-1.block.font-medium {
+  color: #6c757d !important;
+}
+
+.py-1.block.font-medium:hover {
+  color: #495057 !important;
+}
+
+/* Substituir tons de verde por azul */
+[data-component="Check"] {
+  background-color: #f0f9ff !important;
+  border-color: #0ea5e9 !important;
+  background: #f0f9ff !important;
+  border: 1px solid #0ea5e9 !important;
+}
+
+[data-component="Check"] svg {
+  color: #0ea5e9 !important;
+}
+
+/* Override mais específico para componentes Check */
+div[data-component="Check"] {
+  background-color: #f0f9ff !important;
+  background: #f0f9ff !important;
+  border-color: #0ea5e9 !important;
+  border: 1px solid #0ea5e9 !important;
+}
+
+div[data-component="Check"] * {
+  background-color: #f0f9ff !important;
+  background: #f0f9ff !important;
+}
+
+/* Override para qualquer elemento dentro do Check */
+[data-component="Check"] > *,
+[data-component="Check"] div,
+[data-component="Check"] span {
+  background-color: #f0f9ff !important;
+  background: #f0f9ff !important;
+  border-color: #0ea5e9 !important;
+}
+
+[data-component="Info"] {
+  background-color: #f0f9ff !important;
+  border-color: #0ea5e9 !important;
+}
+
+[data-component="Info"] svg {
+  color: #0ea5e9 !important;
+}
+
+[data-component="Warning"] {
+  background-color: #fef3c7 !important;
+  border-color: #f59e0b !important;
+}
+
+[data-component="Warning"] svg {
+  color: #f59e0b !important;
+}
+
+[data-component="Note"] {
+  background-color: #f0f9ff !important;
+  border-color: #0ea5e9 !important;
+}
+
+[data-component="Note"] svg {
+  color: #0ea5e9 !important;
+}
+
+/* Override para elementos com fundo verde */
+[style*="background-color: rgb(247, 255, 250)"],
+[style*="background-color: #f7fffa"],
+[style*="background-color: rgb(240, 253, 244)"],
+[style*="background-color: #f0fdf4"] {
+  background-color: #f0f9ff !important;
+}
+
+/* Override para elementos com cor verde */
+[style*="color: rgb(34, 197, 94)"],
+[style*="color: #22c55e"],
+[style*="color: rgb(16, 185, 129)"],
+[style*="color: #10b981"] {
+  color: #0ea5e9 !important;
+}
+
+/* Override para ícones de check verde */
+[data-component="Check"] svg[fill="currentColor"],
+[data-component="Check"] svg[stroke="currentColor"] {
+  color: #0ea5e9 !important;
+  fill: #0ea5e9 !important;
+  stroke: #0ea5e9 !important;
+}
+
+/* Override mais abrangente para todos os elementos verdes */
+*[style*="background-color: rgb(247, 255, 250)"],
+*[style*="background-color: #f7fffa"],
+*[style*="background-color: rgb(240, 253, 244)"],
+*[style*="background-color: #f0fdf4"],
+*[style*="background-color: rgb(220, 252, 231)"],
+*[style*="background-color: #dcfce7"],
+*[style*="background-color: rgb(187, 247, 208)"],
+*[style*="background-color: #bbf7d0"] {
+  background-color: #f0f9ff !important;
+}
+
+*[style*="color: rgb(34, 197, 94)"],
+*[style*="color: #22c55e"],
+*[style*="color: rgb(16, 185, 129)"],
+*[style*="color: #10b981"],
+*[style*="color: rgb(5, 150, 105)"],
+*[style*="color: #059669"],
+*[style*="color: rgb(4, 120, 87)"],
+*[style*="color: #047857"] {
+  color: #0ea5e9 !important;
+}
+
+/* Override para classes Tailwind verdes */
+.bg-green-50,
+.bg-green-100,
+.bg-green-200,
+.bg-green-300,
+.bg-green-400,
+.bg-green-500 {
+  background-color: #f0f9ff !important;
+}
+
+.text-green-500,
+.text-green-600,
+.text-green-700,
+.text-green-800,
+.text-green-900 {
+  color: #0ea5e9 !important;
+}
+
+.border-green-200,
+.border-green-300,
+.border-green-400,
+.border-green-500 {
+  border-color: #0ea5e9 !important;
+}
+
+/* Override para elementos com classe de sucesso */
+.success,
+.positive,
+.check,
+.checkmark {
+  background-color: #f0f9ff !important;
+  border-color: #0ea5e9 !important;
+  color: #0ea5e9 !important;
+}
+
+.success svg,
+.positive svg,
+.check svg,
+.checkmark svg {
+  color: #0ea5e9 !important;
+  fill: #0ea5e9 !important;
+  stroke: #0ea5e9 !important;
+}
+
+/* Override para qualquer elemento com cor verde */
+*[class*="green"] {
+  background-color: #f0f9ff !important;
+  border-color: #0ea5e9 !important;
+  color: #0ea5e9 !important;
+}
+
+*[class*="green"] svg {
+  color: #0ea5e9 !important;
+  fill: #0ea5e9 !important;
+  stroke: #0ea5e9 !important;
+}
+
+/* Estilo para botão "Acessar Plataforma" na navbar */
+nav a[href="https://app.ladobom.com/"]
+{
+  background-color: #502896 !important;
+  color: white !important;
+  border: 1px solid #502896 !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all 0.2s ease !important;
+}
+
+nav a[href="https://app.ladobom.com/"]:hover
+{
+  background-color: #3d1f6b !important;
+  color: white !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(80, 40, 150, 0.3) !important;
+}
+
+/* Estilo para links da navbar que contêm "Acessar Plataforma" */
+nav a[href*="app.ladobom.com"] {
+  background-color: #502896 !important;
+  color: white !important;
+  border: 1px solid #502896 !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all 0.2s ease !important;
+}
+
+nav a[href*="app.ladobom.com"]:hover {
+  background-color: #3d1f6b !important;
+  color: white !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(80, 40, 150, 0.3) !important;
+}
+
+/* Esconder botão de dark mode */
+button[aria-label*="theme"],
+button[aria-label*="Theme"],
+button[title*="theme"],
+button[title*="Theme"],
+[data-testid*="theme"],
+[data-testid*="Theme"],
+button[class*="theme"],
+button[class*="Theme"],
+button[class*="dark"],
+button[class*="light"],
+button[class*="toggle"],
+button[class*="Toggle"] {
+  display: none !important;
+}
+
+/* Esconder ícones de sol/lua (theme toggle) */
+svg[class*="sun"],
+svg[class*="moon"],
+svg[class*="theme"],
+button svg[class*="sun"],
+button svg[class*="moon"],
+button svg[class*="theme"] {
+  display: none !important;
+}
+
+/* Esconder elementos com ícones de tema */
+button:has(svg[class*="sun"]),
+button:has(svg[class*="moon"]),
+button:has(svg[class*="theme"]) {
+  display: none !important;
+}
+
+/* Override ultra específico para componentes Check com fundo verde */
+[data-component="Check"][style*="background"],
+[data-component="Check"][style*="border"],
+div[data-component="Check"][style*="background"],
+div[data-component="Check"][style*="border"] {
+  background-color: #f0f9ff !important;
+  background: #f0f9ff !important;
+  border-color: #0ea5e9 !important;
+  border: 1px solid #0ea5e9 !important;
+}
+
+/* Força override em todos os elementos com fundo verde */
+*[style*="background-color: rgb(247, 255, 250)"],
+*[style*="background-color: #f7fffa"],
+*[style*="background-color: rgb(240, 253, 244)"],
+*[style*="background-color: #f0fdf4"],
+*[style*="background-color: rgb(220, 252, 231)"],
+*[style*="background-color: #dcfce7"],
+*[style*="background-color: rgb(187, 247, 208)"],
+*[style*="background-color: #bbf7d0"],
+*[style*="background: rgb(247, 255, 250)"],
+*[style*="background: #f7fffa"],
+*[style*="background: rgb(240, 253, 244)"],
+*[style*="background: #f0fdf4"] {
+  background-color: #f0f9ff !important;
+  background: #f0f9ff !important;
+}
+
+/* Override para bordas verdes */
+*[style*="border-color: rgb(34, 197, 94)"],
+*[style*="border-color: #22c55e"],
+*[style*="border-color: rgb(16, 185, 129)"],
+*[style*="border-color: #10b981"],
+*[style*="border: 1px solid rgb(34, 197, 94)"],
+*[style*="border: 1px solid #22c55e"] {
+  border-color: #0ea5e9 !important;
+  border: 1px solid #0ea5e9 !important;
+}
+
+/* Override específico para classes Tailwind emerald */
+.bg-emerald-50\/50,
+.bg-emerald-50,
+.bg-emerald-100,
+.bg-emerald-200,
+.bg-emerald-300,
+.bg-emerald-400,
+.bg-emerald-500 {
+  background-color: #f0f9ff !important;
+  background: #f0f9ff !important;
+}
+
+.border-emerald-500\/20,
+.border-emerald-500,
+.border-emerald-400,
+.border-emerald-300,
+.border-emerald-200 {
+  border-color: #0ea5e9 !important;
+  border: 1px solid #0ea5e9 !important;
+}
+
+/* Override para callout com data-callout-type="check" */
+[data-callout-type="check"] {
+  background-color: #f0f9ff !important;
+  background: #f0f9ff !important;
+  border-color: #0ea5e9 !important;
+  border: 1px solid #0ea5e9 !important;
+}
+
+[data-callout-type="check"].bg-emerald-50\/50,
+[data-callout-type="check"].bg-emerald-50 {
+  background-color: #f0f9ff !important;
+  background: #f0f9ff !important;
+}
+
+[data-callout-type="check"].border-emerald-500\/20,
+[data-callout-type="check"].border-emerald-500 {
+  border-color: #0ea5e9 !important;
+  border: 1px solid #0ea5e9 !important;
+}
+
+/* Override para elementos com classes emerald */
+.callout.bg-emerald-50\/50,
+.callout.bg-emerald-50,
+.callout.border-emerald-500\/20,
+.callout.border-emerald-500 {
+  background-color: #f0f9ff !important;
+  background: #f0f9ff !important;
+  border-color: #0ea5e9 !important;
+  border: 1px solid #0ea5e9 !important;
+}
