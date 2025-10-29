@@ -2,6 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Lado Bom Seguros - Documentação",
+  "appearance": "light",
   "colors": {
     "primary": "#502896",
     "light": "#502896",

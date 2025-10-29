@@ -674,3 +674,104 @@ button[class*="copy"] {
   padding-bottom: 0 !important;
   padding-left: 4px !important;
 }
+
+/* Forçar modo light sempre - desabilitar dark mode completamente */
+html,
+body,
+#__next,
+main,
+[data-theme="dark"],
+[data-theme="light"] {
+  color-scheme: light only !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Forçar todos os elementos para modo light */
+*,
+*::before,
+*::after {
+  color-scheme: light only !important;
+}
+
+/* Override para qualquer tema dark */
+[data-theme="dark"] * {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #e5e7eb !important;
+}
+
+/* Forçar cores de fundo para branco */
+[data-theme="dark"] body,
+[data-theme="dark"] html,
+[data-theme="dark"] #__next,
+[data-theme="dark"] main,
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-gray-50,
+[data-theme="dark"] .bg-gray-100 {
+  background-color: #ffffff !important;
+}
+
+/* Forçar cores de texto para preto */
+[data-theme="dark"] p,
+[data-theme="dark"] span,
+[data-theme="dark"] div,
+[data-theme="dark"] li,
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #000000 !important;
+}
+
+/* Forçar navbar para modo light */
+[data-theme="dark"] nav,
+[data-theme="dark"] .navbar,
+[data-theme="dark"] header {
+  background-color: #ffffff !important;
+  border-bottom-color: #e5e7eb !important;
+}
+
+/* Forçar sidebar para modo light */
+[data-theme="dark"] .sidebar,
+[data-theme="dark"] .toc,
+[data-theme="dark"] [class*="sidebar"] {
+  background-color: #f9fafb !important;
+  border-color: #e5e7eb !important;
+}
+
+/* Forçar cards para modo light */
+[data-theme="dark"] .card,
+[data-theme="dark"] [data-component="Card"],
+[data-theme="dark"] [class*="card"] {
+  background-color: #ffffff !important;
+  border-color: #e5e7eb !important;
+  color: #000000 !important;
+}
+
+/* Forçar inputs para modo light */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background-color: #ffffff !important;
+  border-color: #d1d5db !important;
+  color: #000000 !important;
+}
+
+/* Forçar botões para modo light */
+[data-theme="dark"] button {
+  background-color: #f3f4f6 !important;
+  border-color: #d1d5db !important;
+  color: #000000 !important;
+}
+
+/* Forçar links para modo light */
+[data-theme="dark"] a {
+  color: #502896 !important;
+}
+
+[data-theme="dark"] a:hover {
+  color: #3d1f6b !important;
+}
