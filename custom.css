@@ -440,6 +440,70 @@ div[data-component="Check"] * {
   stroke: #0ea5e9 !important;
 }
 
+/* Padding superior para a logo na navbar - regras mais específicas */
+.navbar-logo,
+.navbar .logo,
+header .logo,
+nav .logo,
+[class*="navbar"] [class*="logo"],
+[class*="logo"] img,
+[class*="logo"] svg {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+/* Regras mais específicas para o Mintlify */
+header img,
+header svg,
+.navbar img,
+.navbar svg,
+nav img,
+nav svg,
+[data-testid="navbar"] img,
+[data-testid="navbar"] svg,
+[class*="navbar"] img,
+[class*="navbar"] svg {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Override para elementos com altura específica */
+.h-7,
+[class*="h-7"],
+img[height="32"],
+svg[height="32"] {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Regras ultra específicas para a logo do Mintlify */
+header > div:first-child img,
+header > div:first-child svg,
+.navbar > div:first-child img,
+.navbar > div:first-child svg,
+nav > div:first-child img,
+nav > div:first-child svg {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+/* Override para qualquer imagem/svg no topo da navbar */
+header img:first-child,
+header svg:first-child,
+.navbar img:first-child,
+.navbar svg:first-child,
+nav img:first-child,
+nav svg:first-child {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
 /* Estilo para botão "Acessar Plataforma" na navbar */
 nav a[href="https://app.ladobom.com/"]
 {
@@ -447,7 +511,7 @@ nav a[href="https://app.ladobom.com/"]
   color: white !important;
   border: 1px solid #502896 !important;
   border-radius: 8px !important;
-  padding: 8px 16px !important;
+  padding: 2px 16px !important;
   font-weight: 500 !important;
   text-decoration: none !important;
   display: inline-block !important;
@@ -458,6 +522,7 @@ nav a[href="https://app.ladobom.com/"]:hover
 {
   background-color: #3d1f6b !important;
   color: white !important;
+  padding: 2px 16px !important;
   transform: translateY(-1px) !important;
   box-shadow: 0 4px 12px rgba(80, 40, 150, 0.3) !important;
 }
@@ -468,7 +533,7 @@ nav a[href*="app.ladobom.com"] {
   color: white !important;
   border: 1px solid #502896 !important;
   border-radius: 8px !important;
-  padding: 8px 16px !important;
+  padding: 2px 16px !important;
   font-weight: 500 !important;
   text-decoration: none !important;
   display: inline-block !important;
@@ -478,6 +543,7 @@ nav a[href*="app.ladobom.com"] {
 nav a[href*="app.ladobom.com"]:hover {
   background-color: #3d1f6b !important;
   color: white !important;
+  padding: 2px 16px !important;
   transform: translateY(-1px) !important;
   box-shadow: 0 4px 12px rgba(80, 40, 150, 0.3) !important;
 }
@@ -597,7 +663,7 @@ nav a[href*="app.ladobom.com"]:hover {
 [data-theme="dark"] [data-component="Card"] h4,
 [data-theme="dark"] [data-component="Card"] h5,
 [data-theme="dark"] [data-component="Card"] h6 {
-  color: #c4b5fd !important;
+  color: #502896 !important;
 }
 
 /* Texto em cards no dark mode */
@@ -688,11 +754,12 @@ nav a[href*="app.ladobom.com"]:hover {
   border-color: #334155 !important;
 }
 
-/* Override específico para tons de roxo no dark mode */
+/* Override específico para tons de roxo no dark mode - usar cor primária */
 [data-theme="dark"] [style*="color: #502896"],
 [data-theme="dark"] [style*="color: #3d1f6b"],
-[data-theme="dark"] [style*="color: #1e143c"] {
-  color: #a78bfa !important;
+[data-theme="dark"] [style*="color: #1e143c"],
+[data-theme="dark"] [style*="color: #2D1B69"] {
+  color: #502896 !important;
 }
 
 /* Override para classes Tailwind com tons de roxo */
@@ -700,13 +767,13 @@ nav a[href*="app.ladobom.com"]:hover {
 [data-theme="dark"] .text-purple-700,
 [data-theme="dark"] .text-purple-800,
 [data-theme="dark"] .text-purple-900 {
-  color: #a78bfa !important;
+  color: #502896 !important;
 }
 
 /* Override para elementos com cor primária da marca */
 [data-theme="dark"] [style*="color: var(--primary-color)"],
 [data-theme="dark"] [style*="color: var(--primary-dark)"] {
-  color: #a78bfa !important;
+  color: #502896 !important;
 }
 
 /* Override para títulos que usam a cor primária */
@@ -716,6 +783,23 @@ nav a[href*="app.ladobom.com"]:hover {
 [data-theme="dark"] h4[class*="text-primary"],
 [data-theme="dark"] h5[class*="text-primary"],
 [data-theme="dark"] h6[class*="text-primary"] {
+  color: #502896 !important;
+}
+
+/* Override específico para títulos principais com cor primária */
+[data-theme="dark"] h1[style*="color: #502896"],
+[data-theme="dark"] h2[style*="color: #502896"],
+[data-theme="dark"] h3[style*="color: #502896"],
+[data-theme="dark"] h4[style*="color: #502896"],
+[data-theme="dark"] h5[style*="color: #502896"],
+[data-theme="dark"] h6[style*="color: #502896"] {
+  color: #c4b5fd !important;
+}
+
+/* Override para qualquer texto com cor primária */
+[data-theme="dark"] [style*="color: #502896"],
+[data-theme="dark"] [style*="color: #3d1f6b"],
+[data-theme="dark"] [style*="color: #2D1B69"] {
   color: #c4b5fd !important;
 }
 
@@ -724,24 +808,94 @@ nav a[href*="app.ladobom.com"]:hover {
 [data-theme="dark"] .sidebar [style*="color: #502896"],
 [data-theme="dark"] .toc [style*="color: #502896"],
 [data-theme="dark"] main [style*="color: #502896"] {
-  color: #a78bfa !important;
+  color: #502896 !important;
+}
+
+/* Override para elementos com cor primária em diferentes contextos - versão mais clara */
+[data-theme="dark"] .navbar [style*="color: #3d1f6b"],
+[data-theme="dark"] .sidebar [style*="color: #3d1f6b"],
+[data-theme="dark"] .toc [style*="color: #3d1f6b"],
+[data-theme="dark"] main [style*="color: #3d1f6b"] {
+  color: #502896 !important;
+}
+
+/* Override para elementos com cor primária em diferentes contextos - versão mais escura */
+[data-theme="dark"] .navbar [style*="color: #1e143c"],
+[data-theme="dark"] .sidebar [style*="color: #1e143c"],
+[data-theme="dark"] .toc [style*="color: #1e143c"],
+[data-theme="dark"] main [style*="color: #1e143c"] {
+  color: #502896 !important;
+}
+
+/* Override para elementos com cor primária em diferentes contextos - versão mais escura */
+[data-theme="dark"] .navbar [style*="color: #2D1B69"],
+[data-theme="dark"] .sidebar [style*="color: #2D1B69"],
+[data-theme="dark"] .toc [style*="color: #2D1B69"],
+[data-theme="dark"] main [style*="color: #2D1B69"] {
+  color: #502896 !important;
+}
+
+/* Override ultra específico para títulos com cor primária no dark mode */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #502896 !important;
+}
+
+/* Override para títulos que podem ter cor primária aplicada */
+[data-theme="dark"] .page-title,
+[data-theme="dark"] .hero-title,
+[data-theme="dark"] .main-title,
+[data-theme="dark"] [class*="title"] {
+  color: #502896 !important;
+}
+
+/* Override específico para títulos das seções do menu lateral */
+[data-theme="dark"] .sidebar h2,
+[data-theme="dark"] .sidebar h3,
+[data-theme="dark"] .sidebar h4,
+[data-theme="dark"] .sidebar h5,
+[data-theme="dark"] .sidebar h6,
+[data-theme="dark"] [class*="sidebar"] h2,
+[data-theme="dark"] [class*="sidebar"] h3,
+[data-theme="dark"] [class*="sidebar"] h4,
+[data-theme="dark"] [class*="sidebar"] h5,
+[data-theme="dark"] [class*="sidebar"] h6,
+[data-theme="dark"] .toc h2,
+[data-theme="dark"] .toc h3,
+[data-theme="dark"] .toc h4,
+[data-theme="dark"] .toc h5,
+[data-theme="dark"] .toc h6 {
+  color: #502896 !important;
+}
+
+/* Override para grupos de navegação no menu lateral */
+[data-theme="dark"] .navigation-group,
+[data-theme="dark"] [class*="group"],
+[data-theme="dark"] [class*="Group"],
+[data-theme="dark"] .nav-group,
+[data-theme="dark"] [class*="nav-group"] {
+  color: #502896 !important;
 }
 
 /* Override para elementos com cor primária em cards */
 [data-theme="dark"] [data-component="Card"] [style*="color: #502896"],
 [data-theme="dark"] .card [style*="color: #502896"] {
-  color: #c4b5fd !important;
+  color: #502896 !important;
 }
 
 /* Override para links com cor primária */
 [data-theme="dark"] a[style*="color: #502896"],
 [data-theme="dark"] a[class*="text-primary"] {
-  color: #a78bfa !important;
+  color: #502896 !important;
 }
 
 [data-theme="dark"] a[style*="color: #502896"]:hover,
 [data-theme="dark"] a[class*="text-primary"]:hover {
-  color: #c4b5fd !important;
+  color: #502896 !important;
 }
 
 /* Override ultra específico para títulos principais no dark mode */
@@ -752,14 +906,11 @@ nav a[href*="app.ladobom.com"]:hover {
 [data-theme="dark"] .main h1,
 [data-theme="dark"] .container h1,
 [data-theme="dark"] .wrapper h1 {
-  color: #ffffff !important;
+  color: #502896 !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Override para qualquer h1 no dark mode */
-[data-theme="dark"] h1 {
-  color: #ffffff !important;
-}
+/* Override para qualquer h1 no dark mode - removido para permitir cor roxa clara */
 
 /* Override para elementos com texto escuro no dark mode */
 [data-theme="dark"] [style*="color: #1f2937"],
@@ -769,6 +920,32 @@ nav a[href*="app.ladobom.com"]:hover {
 [data-theme="dark"] [class*="text-gray-800"],
 [data-theme="dark"] [class*="text-black"] {
   color: #f8fafc !important;
+}
+
+/* Remover padding-top e padding-bottom do botão Copy page */
+[data-testid="copy-page-button"],
+[data-testid="copy-button"],
+button[aria-label*="copy"],
+button[title*="copy"],
+button[title*="Copy"],
+button[aria-label*="Copy"],
+[class*="copy-button"],
+[class*="copyButton"],
+button[class*="copy"],
+[class*="py-1.5"],
+[class*="py-1\.5"] {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 4px !important;
+}
+
+/* Override específico para classes py-1.5 que afetam o botão copy */
+.py-1\.5,
+[class*="py-1.5"],
+[class*="py-1\.5"] {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 4px !important;
 }
 
 /* Override ultra específico para componentes Check com fundo verde */
