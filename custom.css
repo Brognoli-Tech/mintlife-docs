@@ -482,91 +482,293 @@ nav a[href*="app.ladobom.com"]:hover {
   box-shadow: 0 4px 12px rgba(80, 40, 150, 0.3) !important;
 }
 
-/* Esconder botão de dark mode */
-button[aria-label*="theme"],
-button[aria-label*="Theme"],
-button[title*="theme"],
-button[title*="Theme"],
-[data-testid*="theme"],
-[data-testid*="Theme"],
-button[class*="theme"],
-button[class*="Theme"],
-button[class*="dark"],
-button[class*="light"],
-button[class*="toggle"],
-button[class*="Toggle"] {
-  display: none !important;
+/* Botão de dark mode habilitado - removidas as regras que escondiam o botão */
+
+/* Melhorias para Dark Mode - Tons mais claros e legíveis */
+[data-theme="dark"] {
+  --background: #1a1a2e !important;
+  --surface: #16213e !important;
+  --surface-elevated: #0f3460 !important;
+  --text-primary: #e2e8f0 !important;
+  --text-secondary: #cbd5e1 !important;
+  --border: #334155 !important;
 }
 
-/* Esconder ícones de sol/lua (theme toggle) */
-svg[class*="sun"],
-svg[class*="moon"],
-svg[class*="theme"],
-button svg[class*="sun"],
-button svg[class*="moon"],
-button svg[class*="theme"] {
-  display: none !important;
+/* Fundo principal do dark mode mais claro */
+[data-theme="dark"] body,
+[data-theme="dark"] html,
+[data-theme="dark"] #__next,
+[data-theme="dark"] main {
+  background-color: #1a1a2e !important;
 }
 
-/* Esconder elementos com ícones de tema */
-button:has(svg[class*="sun"]),
-button:has(svg[class*="moon"]),
-button:has(svg[class*="theme"]) {
-  display: none !important;
+/* Superfícies do dark mode mais claras */
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-gray-50,
+[data-theme="dark"] .bg-gray-100,
+[data-theme="dark"] [class*="bg-white"],
+[data-theme="dark"] [class*="bg-gray"] {
+  background-color: #16213e !important;
 }
 
-/* Garantir que ícones dos Cards apareçam */
-[data-component="Card"] svg,
-.card svg,
-[class*="card"] svg,
-div[data-component="Card"] svg,
-div[class*="card"] svg,
-[data-component="Card"] [class*="icon"] svg,
-[data-component="Card"] [class*="Icon"] svg {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  width: 24px !important;
-  height: 24px !important;
+/* Cards e containers no dark mode */
+[data-theme="dark"] .card,
+[data-theme="dark"] [data-component="Card"],
+[data-theme="dark"] .bg-card,
+[data-theme="dark"] [class*="card"] {
+  background-color: #16213e !important;
+  border-color: #334155 !important;
 }
 
-/* Forçar exibição de ícones específicos */
-[data-component="Card"] [class*="check"],
-[data-component="Card"] [class*="document"],
-[data-component="Card"] [class*="currency"],
-[data-component="Card"] [class*="arrow"],
-[data-component="Card"] [class*="exclamation"],
-[data-component="Card"] [class*="dollar"],
-[data-component="Card"] [class*="refresh"],
-[data-component="Card"] [class*="clockwise"] {
-  display: block !important;
-  visibility: visible !important;
+/* Navbar no dark mode */
+[data-theme="dark"] nav,
+[data-theme="dark"] .navbar,
+[data-theme="dark"] header {
+  background-color: #0f3460 !important;
+  border-bottom-color: #334155 !important;
 }
 
-/* Forçar exibição de ícones específicos do Mintlify */
-[data-component="Card"] svg[data-icon="dollar-sign"],
-[data-component="Card"] svg[data-icon="refresh"],
-[data-component="Card"] svg[data-icon="currency-dollar"],
-[data-component="Card"] svg[data-icon="arrow-clockwise"],
-[data-component="Card"] svg[data-icon="document-text"],
-[data-component="Card"] svg[data-icon="check-circle"],
-[data-component="Card"] svg[data-icon="document"],
-[data-component="Card"] svg[data-icon="money"],
-[data-component="Card"] svg[data-icon="repeat"],
-[data-component="Card"] svg[data-icon="exclamation-triangle"],
-[data-component="Card"] svg[data-icon="star"],
-[data-component="Card"] svg[data-icon="file-text"],
-[data-component="Card"] svg[data-icon="circle"],
-[data-component="Card"] svg[data-icon="globe"],
-[data-component="Card"] svg[data-icon="building"],
-[data-component="Card"] svg[data-icon="map-pin"],
-[data-component="Card"] svg[data-icon="lock"],
-[data-component="Card"] svg[data-icon="circle"] {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  width: 24px !important;
-  height: 24px !important;
+/* Menu lateral no dark mode */
+[data-theme="dark"] .sidebar,
+[data-theme="dark"] .toc,
+[data-theme="dark"] [class*="sidebar"] {
+  background-color: #16213e !important;
+  border-color: #334155 !important;
+}
+
+/* Texto no dark mode mais legível */
+[data-theme="dark"] p,
+[data-theme="dark"] span,
+[data-theme="dark"] div,
+[data-theme="dark"] li {
+  color: #e2e8f0 !important;
+}
+
+/* Títulos no dark mode */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #f8fafc !important;
+}
+
+/* Título principal da página no dark mode - mais claro */
+[data-theme="dark"] h1:first-of-type,
+[data-theme="dark"] main h1,
+[data-theme="dark"] .main-content h1,
+[data-theme="dark"] [data-testid="page-title"] h1,
+[data-theme="dark"] .page-title h1 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Override específico para títulos grandes */
+[data-theme="dark"] h1[class*="text-"],
+[data-theme="dark"] h1[style*="color"],
+[data-theme="dark"] h1[style*="font-size"] {
+  color: #ffffff !important;
+}
+
+/* Títulos com cor primária roxa no dark mode - tons mais claros */
+[data-theme="dark"] h1[style*="color: #502896"],
+[data-theme="dark"] h2[style*="color: #502896"],
+[data-theme="dark"] h3[style*="color: #502896"],
+[data-theme="dark"] h4[style*="color: #502896"],
+[data-theme="dark"] h5[style*="color: #502896"],
+[data-theme="dark"] h6[style*="color: #502896"],
+[data-theme="dark"] [class*="text-primary"],
+[data-theme="dark"] [style*="color: #502896"] {
+  color: #a78bfa !important;
+}
+
+/* Override para elementos com cor primária roxa */
+[data-theme="dark"] .text-primary,
+[data-theme="dark"] [class*="text-primary"],
+[data-theme="dark"] [data-color="primary"] {
+  color: #a78bfa !important;
+}
+
+/* Títulos específicos do Mintlify no dark mode */
+[data-theme="dark"] [data-component="Card"] h1,
+[data-theme="dark"] [data-component="Card"] h2,
+[data-theme="dark"] [data-component="Card"] h3,
+[data-theme="dark"] [data-component="Card"] h4,
+[data-theme="dark"] [data-component="Card"] h5,
+[data-theme="dark"] [data-component="Card"] h6 {
+  color: #c4b5fd !important;
+}
+
+/* Texto em cards no dark mode */
+[data-theme="dark"] [data-component="Card"] p,
+[data-theme="dark"] [data-component="Card"] span,
+[data-theme="dark"] [data-component="Card"] div {
+  color: #e2e8f0 !important;
+}
+
+/* Links no dark mode */
+[data-theme="dark"] a {
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] a:hover {
+  color: #93c5fd !important;
+}
+
+/* Bordas no dark mode */
+[data-theme="dark"] .border,
+[data-theme="dark"] [class*="border"] {
+  border-color: #334155 !important;
+}
+
+/* Inputs e formulários no dark mode */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background-color: #16213e !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+/* Botões no dark mode */
+[data-theme="dark"] button {
+  background-color: #0f3460 !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] button:hover {
+  background-color: #1e40af !important;
+}
+
+/* Componentes específicos do Mintlify no dark mode */
+[data-theme="dark"] [data-component="Info"] {
+  background-color: #1e3a8a !important;
+  border-color: #3b82f6 !important;
+  color: #dbeafe !important;
+}
+
+[data-theme="dark"] [data-component="Warning"] {
+  background-color: #92400e !important;
+  border-color: #f59e0b !important;
+  color: #fef3c7 !important;
+}
+
+[data-theme="dark"] [data-component="Note"] {
+  background-color: #1e3a8a !important;
+  border-color: #3b82f6 !important;
+  color: #dbeafe !important;
+}
+
+[data-theme="dark"] [data-component="Check"] {
+  background-color: #1e3a8a !important;
+  border-color: #3b82f6 !important;
+  color: #dbeafe !important;
+}
+
+/* Tabelas no dark mode */
+[data-theme="dark"] table {
+  background-color: #16213e !important;
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] th,
+[data-theme="dark"] td {
+  background-color: #16213e !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+/* Código no dark mode */
+[data-theme="dark"] code,
+[data-theme="dark"] pre {
+  background-color: #0f3460 !important;
+  color: #e2e8f0 !important;
+  border-color: #334155 !important;
+}
+
+/* Override específico para tons de roxo no dark mode */
+[data-theme="dark"] [style*="color: #502896"],
+[data-theme="dark"] [style*="color: #3d1f6b"],
+[data-theme="dark"] [style*="color: #1e143c"] {
+  color: #a78bfa !important;
+}
+
+/* Override para classes Tailwind com tons de roxo */
+[data-theme="dark"] .text-purple-600,
+[data-theme="dark"] .text-purple-700,
+[data-theme="dark"] .text-purple-800,
+[data-theme="dark"] .text-purple-900 {
+  color: #a78bfa !important;
+}
+
+/* Override para elementos com cor primária da marca */
+[data-theme="dark"] [style*="color: var(--primary-color)"],
+[data-theme="dark"] [style*="color: var(--primary-dark)"] {
+  color: #a78bfa !important;
+}
+
+/* Override para títulos que usam a cor primária */
+[data-theme="dark"] h1[class*="text-primary"],
+[data-theme="dark"] h2[class*="text-primary"],
+[data-theme="dark"] h3[class*="text-primary"],
+[data-theme="dark"] h4[class*="text-primary"],
+[data-theme="dark"] h5[class*="text-primary"],
+[data-theme="dark"] h6[class*="text-primary"] {
+  color: #c4b5fd !important;
+}
+
+/* Override para elementos com cor primária em diferentes contextos */
+[data-theme="dark"] .navbar [style*="color: #502896"],
+[data-theme="dark"] .sidebar [style*="color: #502896"],
+[data-theme="dark"] .toc [style*="color: #502896"],
+[data-theme="dark"] main [style*="color: #502896"] {
+  color: #a78bfa !important;
+}
+
+/* Override para elementos com cor primária em cards */
+[data-theme="dark"] [data-component="Card"] [style*="color: #502896"],
+[data-theme="dark"] .card [style*="color: #502896"] {
+  color: #c4b5fd !important;
+}
+
+/* Override para links com cor primária */
+[data-theme="dark"] a[style*="color: #502896"],
+[data-theme="dark"] a[class*="text-primary"] {
+  color: #a78bfa !important;
+}
+
+[data-theme="dark"] a[style*="color: #502896"]:hover,
+[data-theme="dark"] a[class*="text-primary"]:hover {
+  color: #c4b5fd !important;
+}
+
+/* Override ultra específico para títulos principais no dark mode */
+[data-theme="dark"] h1,
+[data-theme="dark"] .hero h1,
+[data-theme="dark"] .page-header h1,
+[data-theme="dark"] .content h1,
+[data-theme="dark"] .main h1,
+[data-theme="dark"] .container h1,
+[data-theme="dark"] .wrapper h1 {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Override para qualquer h1 no dark mode */
+[data-theme="dark"] h1 {
+  color: #ffffff !important;
+}
+
+/* Override para elementos com texto escuro no dark mode */
+[data-theme="dark"] [style*="color: #1f2937"],
+[data-theme="dark"] [style*="color: #111827"],
+[data-theme="dark"] [style*="color: #000000"],
+[data-theme="dark"] [class*="text-gray-900"],
+[data-theme="dark"] [class*="text-gray-800"],
+[data-theme="dark"] [class*="text-black"] {
+  color: #f8fafc !important;
 }
 
 /* Override ultra específico para componentes Check com fundo verde */
