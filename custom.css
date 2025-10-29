@@ -515,6 +515,60 @@ button:has(svg[class*="theme"]) {
   display: none !important;
 }
 
+/* Garantir que ícones dos Cards apareçam */
+[data-component="Card"] svg,
+.card svg,
+[class*="card"] svg,
+div[data-component="Card"] svg,
+div[class*="card"] svg,
+[data-component="Card"] [class*="icon"] svg,
+[data-component="Card"] [class*="Icon"] svg {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+/* Forçar exibição de ícones específicos */
+[data-component="Card"] [class*="check"],
+[data-component="Card"] [class*="document"],
+[data-component="Card"] [class*="currency"],
+[data-component="Card"] [class*="arrow"],
+[data-component="Card"] [class*="exclamation"],
+[data-component="Card"] [class*="dollar"],
+[data-component="Card"] [class*="refresh"],
+[data-component="Card"] [class*="clockwise"] {
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* Forçar exibição de ícones específicos do Mintlify */
+[data-component="Card"] svg[data-icon="dollar-sign"],
+[data-component="Card"] svg[data-icon="refresh"],
+[data-component="Card"] svg[data-icon="currency-dollar"],
+[data-component="Card"] svg[data-icon="arrow-clockwise"],
+[data-component="Card"] svg[data-icon="document-text"],
+[data-component="Card"] svg[data-icon="check-circle"],
+[data-component="Card"] svg[data-icon="document"],
+[data-component="Card"] svg[data-icon="money"],
+[data-component="Card"] svg[data-icon="repeat"],
+[data-component="Card"] svg[data-icon="exclamation-triangle"],
+[data-component="Card"] svg[data-icon="star"],
+[data-component="Card"] svg[data-icon="file-text"],
+[data-component="Card"] svg[data-icon="circle"],
+[data-component="Card"] svg[data-icon="globe"],
+[data-component="Card"] svg[data-icon="building"],
+[data-component="Card"] svg[data-icon="map-pin"],
+[data-component="Card"] svg[data-icon="lock"],
+[data-component="Card"] svg[data-icon="circle"] {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+
 /* Override ultra específico para componentes Check com fundo verde */
 [data-component="Check"][style*="background"],
 [data-component="Check"][style*="border"],

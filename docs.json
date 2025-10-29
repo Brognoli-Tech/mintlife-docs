@@ -15,7 +15,13 @@
         "groups": [
           {
             "group": "Início",
-            "pages": ["index", "conceitos-gerais", "sobre-nos", "contato"]
+            "pages": [
+              "index",
+              "conceitos-gerais",
+              "sobre-nos",
+              "sla-atendimento",
+              "contato"
+            ]
           },
           {
             "group": "Seguro Fiança",
@@ -72,6 +78,10 @@
   "navbar": {
     "logo": {
       "height": 40
+    },
+    "search": {
+      "placeholder": "Pesquisar...",
+      "enabled": true
     },
     "links": [
       {
