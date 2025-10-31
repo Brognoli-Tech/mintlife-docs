@@ -2,7 +2,9 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Lado Bom Seguros - Documentação",
-  "appearance": "light",
+  "appearance": {
+    "theme": "light"
+  },
   "colors": {
     "primary": "#502896",
     "light": "#502896",
@@ -78,7 +80,7 @@
   },
   "navbar": {
     "logo": {
-      "height": 32
+      "height": 28
     },
     "search": {
       "placeholder": "Pesquisar...",
