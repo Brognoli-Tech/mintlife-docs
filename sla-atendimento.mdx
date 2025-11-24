@@ -1,129 +1,256 @@
 ---
 title: "SLA de Atendimento"
-description: "Prazos de atendimento e processamento por produto"
+description: "Prazos de atendimento e processamento por atividade"
 icon: "clock"
 ---
 
 <Info>
-Prazos de resposta e processamento para cada produto e tipo de solicitação.
+Prazos de resposta e processamento para cada atividade, com os respectivos compromissos da Corretora de Seguros e das Seguradoras.
 </Info>
 
-## Atendimento Geral
+## Tabela de Prazos
+
+<AccordionGroup>
+<Accordion title="Análise de seguro fiança pessoa física imóvel residencial">
+  **Corretora**: Imediato — 5 minutos
+  
+  **Seguradora**: Conforme análise da seguradora
+</Accordion>
+
+<Accordion title="Análise especial ou reanálise de seguro fiança">
+  **Corretora**: 4 horas
+  
+  **Seguradora**: 48 horas para análise PJ, imóveis não residenciais e pedidos de reanálise
+</Accordion>
+
+<Accordion title="Análise de documentação e abertura sinistro">
+  **Corretora**: 24 horas
+  
+  **Seguradora**: 15 dias para analisar + 15 dias para indenizar
+</Accordion>
+
+<Accordion title="Consulta de sinistro">
+  **Corretora**: 24 horas
+  
+  **Seguradora**: 72 horas
+</Accordion>
+
+<Accordion title="Renovação de apólices">
+  **Corretora**: 24 horas
+  
+  **Seguradora**: 48 horas
+</Accordion>
+
+<Accordion title="Cancelamento de apólices">
+  **Corretora**: 7 dias
+  
+  **Seguradora**: 48 horas
+</Accordion>
+
+<Accordion title="Acompanhamento de cancelamento">
+  **Corretora**: 48 horas
+  
+  **Seguradora**: 48 horas
+</Accordion>
+
+<Accordion title="Contratação de título de capitalização">
+  **Corretora**: 6 horas
+  
+  **Seguradora**: 48 horas após pagamento
+</Accordion>
+
+<Accordion title="Resgate de título de capitalização">
+  **Corretora**: 24 horas
+  
+  **Seguradora**: 15 dias
+</Accordion>
+
+<Accordion title="Segunda via de boleto">
+  **Corretora**: 2 horas
+  
+  **Seguradora**: 24 horas
+</Accordion>
+
+<Accordion title="Consulta de depósito (restituição ou indenização)">
+  **Corretora**: 2 horas
+  
+  **Seguradora**: 48 horas
+</Accordion>
+
+<Accordion title="Endosso de alteração de apólice">
+  **Corretora**: 24 horas
+  
+  **Seguradora**: 48 horas
+</Accordion>
+
+<Accordion title="Prazo de primeira resposta via central WhatsApp – Análise/reanálise de seguro fiança">
+  **Corretora**: 15 minutos
+  
+  **Seguradora**: (sem prazo da seguradora)
+</Accordion>
+
+<Accordion title="Prazo de primeira resposta via central WhatsApp – Demais assuntos">
+  **Corretora**: 30 minutos
+  
+  **Seguradora**: (sem prazo da seguradora)
+</Accordion>
+</AccordionGroup>
+
+## 1. Contagem de Prazos
+
+<Warning>
+Os prazos previstos acima serão contabilizados exclusivamente em **dias úteis**, de segunda a sexta-feira, das **08h às 18h**.
+</Warning>
+
+## 2. Prazo da Corretora
+
+Com exceção dos prazos de primeira resposta previstos na tabela acima, os demais prazos da Corretora de Seguros correspondem ao período necessário para analisar e tratar a solicitação encaminhada pelo Cliente, dentro do escopo operacional previsto no Contrato.
+
+### 2.1. Exemplo – Abertura de Sinistro
+
+<Steps>
+<Step title="Análise Preliminar">
+  A Corretora de Seguros realizará a análise preliminar das informações e documentos enviados
+</Step>
+
+<Step title="Documentos Completos">
+  Caso estejam completos, efetuará o comunicado à seguradora dentro do prazo estabelecido na tabela acima
+</Step>
+
+<Step title="Pendências">
+  Caso exista qualquer pendência documental ou inconsistência, a Corretora de Seguros informará o Cliente, que será o responsável exclusivo por providenciar os documentos faltantes
+</Step>
+
+<Step title="Reenvio">
+  Após o reenvio dos documentos ou informações faltantes, um novo prazo será reiniciado para nova análise e envio à seguradora
+</Step>
+</Steps>
+
+### 2.1.1. Responsabilidade
+
+<Info>
+A Corretora de Seguros realiza a verificação preliminar dos documentos e informações enviados pelo Cliente como forma de suporte operacional, porém não se responsabiliza por eventual pendência identificada posteriormente pela seguradora que possa resultar em negativa, glosa ou perda de indenização.
+</Info>
+
+## 3. Prazo da Seguradora
+
+<Info>
+O prazo da seguradora corresponde ao tempo definido por ela para analisar, aprovar, solicitar documentos, concluir processos ou efetivar pagamentos, conforme suas próprias regras, políticas e fluxos internos.
+</Info>
+
+<Warning>
+A Corretora de Seguros não possui ingerência sobre prazos da seguradora e não poderá ser responsabilizada por eventuais atrasos, exigências adicionais, recusas ou reprocessamentos.
+</Warning>
+
+## 4. Nível de Serviço (SLA)
 
 <CardGroup cols={2}>
-<Card title="WhatsApp" icon="phone" href="https://wa.me/5548996160481">
-  **(48) 99616-0481**
-  
-  **Resposta**: Até 2 horas
+<Card title="Meta de Atendimento" icon="target">
+  A Corretora de Seguros compromete-se a atender no mínimo **90% (noventa por cento)** das solicitações dentro dos prazos definidos neste documento
 </Card>
 
-<Card title="Email" icon="envelope">
-  **suporte@ladobom.com**
-  
-  **Resposta**: Até 4 horas
-</Card>
-
-<Card title="Plataforma" icon="globe" href="https://app.ladobom.com/">
-  **app.ladobom.com**
-  
-  **Resposta**: Conforme produto e tipo de solicitação
+<Card title="Tolerância" icon="check-circle">
+  A tolerância de até **10% (dez por cento)** de chamados fora do prazo compreende situações pontuais e não caracteriza inadimplemento contratual ou falha sistêmica
 </Card>
 </CardGroup>
 
-## Prazos por Produto
-
-<Info>
-Os prazos de resposta variam conforme o produto e tipo de solicitação. A plataforma está sempre disponível, mas as respostas seguem os prazos específicos de cada processo.
-</Info>
+## Resumo por Categoria
 
 ### Seguro Fiança
 
 <CardGroup cols={2}>
-<Card title="Análise de Proposta" icon="check-circle">
-  **Tempo real**
-  
-  Aprovação em poucos minutos
+<Card title="Análise PF - Imóvel Residencial" icon="check-circle">
+  **Corretora**: Imediato — 5 minutos
 </Card>
 
-<Card title="Emissão de Apólice" icon="file-text">
-  **Até 4 horas**
+<Card title="Análise Especial/Reanálise" icon="clock">
+  **Corretora**: 4 horas
   
-  Após aprovação
-</Card>
-
-<Card title="Análise de Sinistro" icon="exclamation-triangle">
-  **Até 5 dias úteis**
-  
-  Análise inicial
-</Card>
-
-<Card title="Pagamento de Sinistro" icon="star">
-  **Até 5 dias úteis**
-  
-  Após aprovação
+  **Seguradora**: 48 horas
 </Card>
 </CardGroup>
 
-### Seguro Incêndio
+### Sinistros
 
 <CardGroup cols={2}>
-<Card title="Análise de Proposta" icon="check-circle">
-  **Até 2 horas**
+<Card title="Abertura de Sinistro" icon="exclamation-triangle">
+  **Corretora**: 24 horas
   
-  Riscos padrão
+  **Seguradora**: 15 dias análise + 15 dias indenização
 </Card>
 
-<Card title="Emissão de Apólice" icon="file-text">
-  **Até 4 horas**
+<Card title="Consulta de Sinistro" icon="magnifying-glass">
+  **Corretora**: 24 horas
   
-  Após aprovação
+  **Seguradora**: 72 horas
+</Card>
+</CardGroup>
+
+### Gestão de Apólices
+
+<CardGroup cols={3}>
+<Card title="Renovação" icon="arrow-path">
+  **Corretora**: 24 horas
+  
+  **Seguradora**: 48 horas
 </Card>
 
-<Card title="Análise de Sinistro" icon="exclamation-triangle">
-  **Até 5 dias úteis**
+<Card title="Cancelamento" icon="x-circle">
+  **Corretora**: 7 dias
   
-  Análise inicial
+  **Seguradora**: 48 horas
 </Card>
 
-<Card title="Pagamento de Sinistro" icon="star">
-  **Até 30 dias**
+<Card title="Endosso/Alteração" icon="pencil">
+  **Corretora**: 24 horas
   
-  Após aprovação
+  **Seguradora**: 48 horas
 </Card>
 </CardGroup>
 
 ### Capitalização
 
 <CardGroup cols={2}>
-<Card title="Análise de Proposta" icon="check-circle">
-  **Tempo real**
+<Card title="Contratação" icon="check">
+  **Corretora**: 6 horas
   
-  Aprovação imediata
+  **Seguradora**: 48 horas após pagamento
 </Card>
 
-<Card title="Ativação do Título" icon="check">
-  **Imediato**
+<Card title="Resgate" icon="currency-dollar">
+  **Corretora**: 24 horas
   
-  Após pagamento
-</Card>
-
-<Card title="Resgate" icon="dollar-sign">
-  **Até 5 dias úteis**
-  
-  Após solicitação
-</Card>
-
-<Card title="Reaplicação" icon="repeat">
-  **Automática**
-  
-  Ao final do prazo
+  **Seguradora**: 15 dias
 </Card>
 </CardGroup>
 
-## Horários de Funcionamento
+### Atendimento WhatsApp
 
-- **Segunda a Sexta**: 8h às 18h
-- **Sábado e Domingo**: Fechado
+<CardGroup cols={2}>
+<Card title="Análise/Reanálise Fiança" icon="phone">
+  **Primeira Resposta**: 15 minutos
+</Card>
+
+<Card title="Demais Assuntos" icon="phone">
+  **Primeira Resposta**: 30 minutos
+</Card>
+</CardGroup>
+
+## Contato
+
+<CardGroup cols={2}>
+<Card title="WhatsApp" icon="phone" href="https://wa.me/5548996160481">
+  **(48) 99616-0481**
+  
+  Resposta: 15-30 minutos
+</Card>
+
+<Card title="Horário Comercial" icon="clock">
+  **Segunda a Sexta**: 8h às 18h
+  
+  Apenas dias úteis
+</Card>
+</CardGroup>
 
 <Note>
 Para mais informações sobre atendimento, consulte nossa [página de contato](/contato).

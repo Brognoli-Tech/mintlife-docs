@@ -14,7 +14,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Guias",
         "groups": [
           {
             "group": "Início",
@@ -54,6 +54,13 @@
               "produtos/capitalizacao/como-funciona",
               "produtos/capitalizacao/beneficios",
               "produtos/capitalizacao/faq"
+            ]
+          },
+          {
+            "group": "Regulamento Promoções/Parcerias",
+            "pages": [
+              "regulamentos-promocoes/pottencializou-ganhou",
+              "regulamentos-promocoes/guia-resgate-bonus-alyplus"
             ]
           }
         ]
