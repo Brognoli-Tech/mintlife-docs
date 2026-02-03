@@ -456,8 +456,7 @@ div[data-component="Check"] * {
 }
 
 /* Estilo para botão "Acessar Plataforma" na navbar */
-nav a[href="https://app.ladobom.com/"]
-{
+nav a[href="https://app.ladobom.com/"] {
   background-color: #502896 !important;
   color: white !important;
   border: 1px solid #502896 !important;
@@ -469,8 +468,7 @@ nav a[href="https://app.ladobom.com/"]
   transition: all 0.2s ease !important;
 }
 
-nav a[href="https://app.ladobom.com/"]:hover
-{
+nav a[href="https://app.ladobom.com/"]:hover {
   background-color: #3d1f6b !important;
   color: white !important;
   transform: translateY(-1px) !important;
@@ -495,39 +493,6 @@ nav a[href*="app.ladobom.com"]:hover {
   color: white !important;
   transform: translateY(-1px) !important;
   box-shadow: 0 4px 12px rgba(80, 40, 150, 0.3) !important;
-}
-
-/* Esconder botão de dark mode */
-button[aria-label*="theme"],
-button[aria-label*="Theme"],
-button[title*="theme"],
-button[title*="Theme"],
-[data-testid*="theme"],
-[data-testid*="Theme"],
-button[class*="theme"],
-button[class*="Theme"],
-button[class*="dark"],
-button[class*="light"],
-button[class*="toggle"],
-button[class*="Toggle"] {
-  display: none !important;
-}
-
-/* Esconder ícones de sol/lua (theme toggle) */
-svg[class*="sun"],
-svg[class*="moon"],
-svg[class*="theme"],
-button svg[class*="sun"],
-button svg[class*="moon"],
-button svg[class*="theme"] {
-  display: none !important;
-}
-
-/* Esconder elementos com ícones de tema */
-button:has(svg[class*="sun"]),
-button:has(svg[class*="moon"]),
-button:has(svg[class*="theme"]) {
-  display: none !important;
 }
 
 /* Garantir que ícones dos Cards apareçam */
@@ -690,105 +655,162 @@ button[class*="copy"] {
   padding-left: 4px !important;
 }
 
-/* Forçar modo light sempre - desabilitar dark mode completamente */
-html,
-body,
-#__next,
-main,
-[data-theme="dark"],
-[data-theme="light"] {
-  color-scheme: light only !important;
-  background-color: #ffffff !important;
-  color: #000000 !important;
+/* Ajustes para dark mode - tons mais claros (lavanda/roxo suave) */
+[data-theme="dark"] {
+  --primary-dark: #beaafa;
 }
 
-/* Forçar todos os elementos para modo light */
-*,
-*::before,
-*::after {
-  color-scheme: light only !important;
-}
-
-/* Override para qualquer tema dark */
-[data-theme="dark"] * {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-  border-color: #e5e7eb !important;
-}
-
-/* Forçar cores de fundo para branco */
 [data-theme="dark"] body,
-[data-theme="dark"] html,
-[data-theme="dark"] #__next,
 [data-theme="dark"] main,
-[data-theme="dark"] .bg-white,
-[data-theme="dark"] .bg-gray-50,
-[data-theme="dark"] .bg-gray-100 {
-  background-color: #ffffff !important;
+[data-theme="dark"] #__next,
+[data-theme="dark"] html {
+  background-color: #2d2a3e !important;
 }
 
-/* Forçar cores de texto para preto */
-[data-theme="dark"] p,
-[data-theme="dark"] span,
-[data-theme="dark"] div,
-[data-theme="dark"] li,
+[data-theme="dark"] nav,
+[data-theme="dark"] header,
+[data-theme="dark"] .navbar {
+  background-color: #352f4a !important;
+}
+
+[data-theme="dark"] [class*="sidebar"],
+[data-theme="dark"] aside {
+  background-color: #2d2a3e !important;
+}
+
+[data-theme="dark"] [data-component="Card"],
+[data-theme="dark"] .card {
+  background-color: #3d3a52 !important;
+  border-color: #4a4560 !important;
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] [class*="search"] {
+  background-color: #3d3a52 !important;
+  border-color: #4a4560 !important;
+}
+
+/* Componentes Check, Info, Warning, Note - dark mode com contraste adequado */
+[data-theme="dark"] [data-component="Check"],
+[data-theme="dark"] [data-callout-type="check"],
+.dark [data-component="Check"],
+.dark [data-callout-type="check"] {
+  background-color: #3d3a52 !important;
+  border-color: #4a4560 !important;
+  color: #e5e2f0 !important;
+}
+
+[data-theme="dark"] [data-component="Check"] *,
+[data-theme="dark"] [data-component="Check"] li,
+[data-theme="dark"] [data-component="Check"] p,
+[data-theme="dark"] [data-component="Check"] span,
+.dark [data-component="Check"] *,
+.dark [data-component="Check"] li,
+.dark [data-component="Check"] p,
+.dark [data-component="Check"] span {
+  color: #e5e2f0 !important;
+  background-color: transparent !important;
+}
+
+/* Ícone/checkmark com fundo transparente - sobrescreve qualquer background do ícone */
+[data-component="Check"] svg,
+[data-component="Check"] svg *,
+[data-component="Check"] [class*="icon"],
+[data-component="Check"] > div > div:first-child,
+[data-component="Check"] li > div:first-child,
+[data-component="Check"] li > span:first-child,
+[data-component="Check"] li > *:first-child,
+[data-theme="dark"] [data-component="Check"] svg,
+[data-theme="dark"] [data-component="Check"] svg *,
+[data-theme="dark"] [data-component="Check"] [class*="icon"],
+[data-theme="dark"] [data-component="Check"] > div > div:first-child,
+[data-theme="dark"] [data-component="Check"] li > div:first-child,
+[data-theme="dark"] [data-component="Check"] li > span:first-child,
+[data-theme="dark"] [data-component="Check"] li > *:first-child,
+.dark [data-component="Check"] svg,
+.dark [data-component="Check"] svg *,
+.dark [data-component="Check"] [class*="icon"],
+.dark [data-component="Check"] > div > div:first-child,
+.dark [data-component="Check"] li > div:first-child,
+.dark [data-component="Check"] li > span:first-child,
+.dark [data-component="Check"] li > *:first-child {
+  background-color: transparent !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] [data-component="Check"] strong,
+[data-theme="dark"] [data-component="Check"] b,
+.dark [data-component="Check"] strong,
+.dark [data-component="Check"] b {
+  color: #beaafa !important;
+}
+
+[data-theme="dark"] [data-component="Info"],
+.dark [data-component="Info"] {
+  background-color: #3d3a52 !important;
+  border-color: #4a4560 !important;
+  color: #e5e2f0 !important;
+}
+
+[data-theme="dark"] [data-component="Warning"],
+.dark [data-component="Warning"] {
+  background-color: #4a3d2a !important;
+  border-color: #5c4a2e !important;
+  color: #f5e6c8 !important;
+}
+
+[data-theme="dark"] [data-component="Note"],
+.dark [data-component="Note"] {
+  background-color: #3d3a52 !important;
+  border-color: #4a4560 !important;
+  color: #e5e2f0 !important;
+}
+
+[data-theme="dark"] a {
+  color: #beaafa !important;
+}
+
+[data-theme="dark"] a:hover {
+  color: #d4c4ff !important;
+}
+
+/* Títulos com cor #BEAAFA no dark mode - cobrir data-theme e classe .dark (Tailwind) */
 [data-theme="dark"] h1,
 [data-theme="dark"] h2,
 [data-theme="dark"] h3,
 [data-theme="dark"] h4,
 [data-theme="dark"] h5,
-[data-theme="dark"] h6 {
-  color: #000000 !important;
+[data-theme="dark"] h6,
+[data-theme="dark"] h5#sidebar-title,
+[data-theme="dark"] span.cursor-pointer,
+[data-theme="dark"] .sidebar h1,
+[data-theme="dark"] .sidebar h2,
+[data-theme="dark"] .sidebar h3,
+[data-theme="dark"] .sidebar h4,
+[data-theme="dark"] .sidebar h5,
+[data-theme="dark"] .sidebar h6,
+[data-theme="dark"] main h1,
+[data-theme="dark"] main h2,
+[data-theme="dark"] main h3,
+[data-theme="dark"] main h4,
+[data-theme="dark"] main h5,
+[data-theme="dark"] main h6,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark h5#sidebar-title,
+.dark span.cursor-pointer,
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6,
+html.dark h5#sidebar-title,
+html.dark span.cursor-pointer {
+  color: #beaafa !important;
 }
-
-/* Forçar navbar para modo light */
-[data-theme="dark"] nav,
-[data-theme="dark"] .navbar,
-[data-theme="dark"] header {
-  background-color: #ffffff !important;
-  border-bottom-color: #e5e7eb !important;
-}
-
-/* Forçar sidebar para modo light */
-[data-theme="dark"] .sidebar,
-[data-theme="dark"] .toc,
-[data-theme="dark"] [class*="sidebar"] {
-  background-color: #f9fafb !important;
-  border-color: #e5e7eb !important;
-}
-
-/* Forçar cards para modo light */
-[data-theme="dark"] .card,
-[data-theme="dark"] [data-component="Card"],
-[data-theme="dark"] [class*="card"] {
-  background-color: #ffffff !important;
-  border-color: #e5e7eb !important;
-  color: #000000 !important;
-}
-
-/* Forçar inputs para modo light */
-[data-theme="dark"] input,
-[data-theme="dark"] textarea,
-[data-theme="dark"] select {
-  background-color: #ffffff !important;
-  border-color: #d1d5db !important;
-  color: #000000 !important;
-}
-
-/* Forçar botões para modo light */
-[data-theme="dark"] button {
-  background-color: #f3f4f6 !important;
-  border-color: #d1d5db !important;
-  color: #000000 !important;
-}
-
-/* Forçar links para modo light */
-[data-theme="dark"] a {
-  color: #502896 !important;
-}
-
-[data-theme="dark"] a:hover {
-  color: #3d1f6b !important;
-}
-
-
