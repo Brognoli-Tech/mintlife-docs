@@ -1,1 +1,97 @@
-{"$schema": "https://mintlify.com/docs.json", "theme": "mint", "name": "Lado Bom Seguros - Documentação", "appearance": {"theme": "light"}, "colors": {"primary": "#502896", "light": "#BEAAFA", "dark": "#1E143C"}, "favicon": "/favicon.ico", "navigation": {"tabs": [{"tab": "Guias", "groups": [{"group": "Início", "pages": ["index", "conceitos-gerais", "sobre-nos", "sla-atendimento", "contato"]}, {"group": "Seguro Fiança", "pages": ["produtos/seguro-fianca/sobre", "produtos/seguro-fianca/como-funciona", "produtos/seguro-fianca/coberturas", "produtos/seguro-fianca/processo-sinistro", "produtos/seguro-fianca/faq"]}, {"group": "Seguro Incêndio", "pages": ["produtos/seguro-incendio/sobre", "produtos/seguro-incendio/coberturas", "produtos/seguro-incendio/contratacao", "produtos/seguro-incendio/renovacao", "produtos/seguro-incendio/faq"]}, {"group": "Capitalização", "pages": ["produtos/capitalizacao/sobre", "produtos/capitalizacao/como-funciona", "produtos/capitalizacao/beneficios", "produtos/capitalizacao/faq"]}, {"group": "Regulamento Promoções/Parcerias", "pages": ["regulamentos-promocoes/pottencializou-ganhou", "regulamentos-promocoes/guia-resgate-bonus-alyplus", "regulamentos-promocoes/bonificacao-too-seguros"]}]}], "global": {"anchors": [{"anchor": "Portal do Parceiro", "href": "https://app.ladobom.com/", "icon": "globe"}, {"anchor": "Atendimento", "href": "https://wa.me/5548988644179", "icon": "headphones"}]}}, "logo": {"light": "/logo/light.svg", "dark": "/logo/dark.svg"}, "navbar": {"logo": {"height": 28}, "search": {"placeholder": "Pesquisar...", "enabled": true}, "links": [{"label": "Suporte", "href": "https://wa.me/5548988644179"}], "primary": {"type": "button", "label": "Acessar Plataforma", "href": "https://app.ladobom.com/"}}, "contextual": {"options": ["copy", "view", "chatgpt", "claude", "perplexity", "mcp", "cursor", "vscode"]}, "footer": {"socials": {"linkedin": "https://www.linkedin.com/company/lado-bom-seguros/", "instagram": "https://instagram.com/ladobom.seguros"}}, "css": "/custom.css"}
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Lado Bom Seguros - Documentação",
+  "appearance": { "theme": "light" },
+  "colors": { "primary": "#502896", "light": "#BEAAFA", "dark": "#1E143C" },
+  "favicon": "/favicon.ico",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guias",
+        "groups": [
+          {
+            "group": "Início",
+            "pages": [
+              "index",
+              "conceitos-gerais",
+              "sobre-nos",
+              "sla-atendimento",
+              "contato"
+            ]
+          },
+          {
+            "group": "Seguro Fiança",
+            "pages": [
+              "produtos/seguro-fianca/sobre",
+              "produtos/seguro-fianca/como-funciona",
+              "produtos/seguro-fianca/coberturas",
+              "produtos/seguro-fianca/processo-sinistro",
+              "produtos/seguro-fianca/faq"
+            ]
+          },
+          {
+            "group": "Seguro Incêndio",
+            "pages": [
+              "produtos/seguro-incendio/sobre",
+              "produtos/seguro-incendio/coberturas",
+              "produtos/seguro-incendio/contratacao",
+              "produtos/seguro-incendio/renovacao",
+              "produtos/seguro-incendio/faq"
+            ]
+          },
+          {
+            "group": "Capitalização",
+            "pages": [
+              "produtos/capitalizacao/sobre",
+              "produtos/capitalizacao/como-funciona",
+              "produtos/capitalizacao/beneficios",
+              "produtos/capitalizacao/faq"
+            ]
+          },
+          {
+            "group": "Regulamento Promoções/Parcerias",
+            "pages": [
+              "regulamentos-promocoes/pottencializou-ganhou",
+              "regulamentos-promocoes/guia-resgate-bonus-alyplus",
+              "regulamentos-promocoes/bonificacao-too-seguros"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Portal do Parceiro",
+          "href": "https://app.ladobom.com/",
+          "icon": "globe"
+        },
+        {
+          "anchor": "Atendimento",
+          "href": "https://wa.me/5548988644179",
+          "icon": "headphones"
+        }
+      ]
+    }
+  },
+  "logo": { "light": "/logo/light.svg", "dark": "/logo/dark.svg" },
+  "navbar": {
+    "logo": { "height": 28 },
+    "search": { "placeholder": "Pesquisar...", "enabled": true },
+    "links": [{ "label": "Suporte", "href": "https://wa.me/5548988644179" }],
+    "primary": {
+      "type": "button",
+      "label": "Acessar Plataforma",
+      "href": "https://app.ladobom.com/"
+    }
+  },
+  "contextual": { "options": ["chatgpt", "claude", "perplexity"] },
+  "footer": {
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/lado-bom-seguros/",
+      "instagram": "https://instagram.com/ladobom.seguros"
+    }
+  },
+  "css": "/custom.css"
+}

@@ -640,21 +640,6 @@ div[data-component="Check"][style*="border"] {
   border: 1px solid #0ea5e9 !important;
 }
 
-/* Ajuste apenas para o botão Copy page - sem afetar menu lateral */
-[data-testid="copy-page-button"],
-[data-testid="copy-button"],
-button[aria-label*="copy"],
-button[title*="copy"],
-button[title*="Copy"],
-button[aria-label*="Copy"],
-[class*="copy-button"],
-[class*="copyButton"],
-button[class*="copy"] {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  padding-left: 4px !important;
-}
-
 /* Ajustes para dark mode - tons mais claros (lavanda/roxo suave) */
 [data-theme="dark"] {
   --primary-dark: #beaafa;
