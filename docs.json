@@ -50,6 +50,16 @@
             ]
           },
           {
+            "group": "Prestamista",
+            "pages": [
+              "produtos/prestamista-capital-vinculado/sobre",
+              "produtos/prestamista-capital-vinculado/coberturas",
+              "produtos/prestamista-capital-vinculado/como-funciona",
+              "produtos/prestamista-capital-vinculado/processo-sinistro",
+              "produtos/prestamista-capital-vinculado/faq"
+            ]
+          },
+          {
             "group": "Regulamento Promoções/Parcerias",
             "pages": [
               "regulamentos-promocoes/pottencializou-ganhou",
